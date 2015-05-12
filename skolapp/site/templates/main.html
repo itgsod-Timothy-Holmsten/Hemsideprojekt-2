@@ -17,26 +17,34 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </head>
 <body>
+    <div class="container">
     <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default navbar-btn">Hem</button>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default navbar-btn">Om skolan</button>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default navbar-btn">Våra arbetslag</button>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default navbar-btn">Jag som förälder</button>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default navbar-btn">Kontakta oss</button>
-          </div>
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="#">Min skola</a>
         </div>
-    </div>
+        <nav id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Hem</a></li>
+                <li><a href="#">Om skolan</a></li>
+                <li><a href="#">Våra arbetslag</a></li>
+                <li><a href="#">Jag som förälder</a></li>
+                <li><a href="#">Kontakta oss</a></li>
+            </ul>
+        </nav>
+        </div>
     </nav>
+
+    <div class="jumbotron">
+        <img src="../img/schoolyard.JPG">
+    </div>
+    </div>
 </body>
 </html>
