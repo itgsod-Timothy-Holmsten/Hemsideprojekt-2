@@ -15,10 +15,23 @@
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    function initialize() {
+      var mapProp = {
+        center:new google.maps.LatLng(59.261805, 18.084582),
+        zoom:15,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     </head>
-<body>
+<body style="padding-top: 70px" id="home">
     <div class="container">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -28,15 +41,16 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="#">Min skola</a>
+          <a class="navbar-brand" href="#home">Min skola</a>
         </div>
         <nav id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Hem</a></li>
-                <li><a href="#">Om skolan</a></li>
-                <li><a href="#">Våra arbetslag</a></li>
-                <li><a href="#">Jag som förälder</a></li>
-                <li><a href="#">Kontakta oss</a></li>
+                <li><a href="#home">Hem</a></li>
+                <li><a href="#news">Nyheter</a></li>
+                <li><a href="#school">Om skolan</a></li>
+                <li><a href="#crew">Våra arbetslag</a></li>
+                <li><a href="#parent">Jag som förälder</a></li>
+                <li><a href="#contact">Kontakta oss</a></li>
             </ul>
         </nav>
         </div>
@@ -53,11 +67,46 @@
             </div>
         </div>
 
-        <div class="jumbotron">
+        <div id="news" class="jumbotron">
             <h1>Nyheter</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta vel leo quis placerat. Duis a scelerisque quam, sit amet dignissim mauris. Praesent scelerisque sapien nisi, vel vulputate magna maximus sed. Vivamus a tellus cursus justo convallis congue. Integer auctor erat vel justo condimentum semper. Cras rutrum ante nibh, a laoreet turpis fringilla sed. Praesent bibendum pulvinar enim, ut aliquam nunc tempus eget. Sed sollicitudin cursus velit, sit amet faucibus nisi. Aliquam erat volutpat. Aliquam euismod in metus in laoreet. Vivamus sit amet hendrerit urna. Maecenas vel turpis eu enim rhoncus dictum.
 
 Etiam porttitor sapien at fringilla accumsan. Aenean feugiat dolor neque. Integer et consectetur turpis, ut semper magna. Aenean tempor est sem, ullamcorper pharetra metus congue ut. Proin sed ultricies mauris. Nulla arcu dolor, commodo a diam eget, fermentum scelerisque nibh. Vivamus lacinia sem ac placerat mattis. Nulla cursus aliquet nisl sed ultrices. Cras nec tristique quam. Nullam ac nibh nec lacus dignissim iaculis ac vel arcu. Donec bibendum ultricies leo, sed scelerisque ligula accumsan euismod. Nunc suscipit eleifend dictum. Nulla imperdiet velit ultricies dapibus sagittis. Curabitur vel posuere sem.</p>
+        </div>
+
+        <div id="school" class="jumbotron">
+            <h1>Om skolan</h1>
+            <p>Skolan ligger på Lingvägen 123 i Stockholm</p>
+            <div id="googleMap" style="width:500px;height:380px;"></div>
+        </div>
+
+        <div id="crew" class="jumbotron">
+            <h1>Våra arbetslag</h1>
+            <h3>Årskurs 7</h3>
+            <p>Lorem ipsum blah blah</p>
+            <h4>Linda</h4>
+            <p>Lorem ipsum blah blah</p>
+            <h4>Roger</h4>
+            <p>Lorem ipsum blah blah</p>
+            <h3>Årskurs 8</h3>
+            <p>Lorem ipsum blah blah</p>
+            <h4>Bosse</h4>
+            <p>Lorem ipsum blah blah</p>
+            <h4>Martin</h4>
+            <p>Lorem ipsum blah blah</p>
+        </div>
+
+        <div id="parent" class="jumbotron">
+            <h1>Jag som förälder</h1>
+            <h2>Sjukanmäla ditt barn</h2>
+            <p>Instruktioner: Ring in och säg att ditt är sjukt och kan inte gå till skolan.</p>
+            <p>Telefon: 076123123</p>
+        </div>
+
+        <div id="contact" class="jumbotron">
+            <h1>Kontakta oss</h1>
+            <p>Telefon till skolan: 076123123</p>
+            <p>Mailadress: skolan@skolan.se</p>
         </div>
     </div>
 </body>
